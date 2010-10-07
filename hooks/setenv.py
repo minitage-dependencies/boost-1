@@ -13,12 +13,12 @@ def setenv(options,buildout):
     os.environ['ZLIB_LIBPATH'] = buildout['zlib']['location'] + "/lib"
 
     os.environ['CFLAGS']   = os.environ.get('CFLAGS',"")\
-    + "-I %s/include" % buildout['bz2']['location'] \
-    + "-I %s/include" % buildout['zlib']['location']
+    + "-I%s/include" % buildout['bz2']['location'] \
+    + "-I%s/include" % buildout['zlib']['location']
 
     os.environ['CPPFLAGS'] = os.environ.get('CFLAGS',"")
     os.environ['CXXFLAGS'] = os.environ.get('CFLAGS',"")
     os.environ['LDFLAGS']  = os.environ.get('LDFLAGS',"") \
-    + "-L %s -Wl,-rpath -Wl,%s" %( buildout['zlib']['location'],  buildout['zlib']['location']) \
-    + "-L %s -Wl,-rpath -Wl,%s" %( buildout['zlib']['location'],  buildout['zlib']['location'])
+    + "-L%s -Wl,-rpath -Wl,%s" %( buildout['zlib']['location'], buildout['zlib']['location']) \
+    + "-L%s -Wl,-rpath -Wl,%s" %( buildout['zlib']['location'], buildout['zlib']['location'])
 # vim:set ts=4 sts=4 et  :

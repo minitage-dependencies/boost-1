@@ -18,6 +18,7 @@ import re
 import os
 
 def hook(options=None,buildout=None):
+    import pdb;pdb.set_trace()  ## Breakpoint ##
     if not options:
         options = {}
     rre=re.compile('-gcc\d+-mt')
