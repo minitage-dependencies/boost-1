@@ -18,7 +18,6 @@ import re
 import os
 
 def hook(options=None,buildout=None):
-    import pdb;pdb.set_trace()  ## Breakpoint ##
     if not options:
         options = {}
     rre=re.compile('-gcc\d+-mt')
@@ -36,6 +35,9 @@ def hook(options=None,buildout=None):
             os.symlink(f[0], f[1])
         except:
             pass
+    fp = os.path.join(buildout['buildout']['directory'], 'user-config.jam')
+    if os.path.exists(fp):
+        os.remove(fp)
 
 if __name__ == '__main__':
     hook()
