@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2009, Mathieu PASQUET <kiorky@cryptelium.net>
+# Copyright (C) 2009, Makina Corpus <freesoftware@makina-corpus.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
